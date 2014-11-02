@@ -1,0 +1,79 @@
+<div ng-controller="FinderCtrl" class="ng-scope">
+
+  <button class="menu-item menu-title"
+    ng-click="toggleShowFinder()"
+    ink-ripple>
+    Find your look
+  </button>
+  <div ng-show="showFinder">
+    <md-radio-group ng-model="data.sex" layout="horizontal">
+
+        <md-radio-button value="male" aria-label="Label 1" flex="50">Male</md-radio-button>
+        <md-radio-button value="female" aria-label="Label 2" flex="50">Female</md-radio-button>
+       
+
+    </md-radio-group>
+
+    <md-divider></md-divider>
+
+    <md-radio-group ng-model="data.color" layout="vertical">
+        <div layout="horizontal">
+          <md-radio-button value="platine" aria-label="Label 1" flex="50">Platine</md-radio-button>
+          <md-radio-button value="brown" aria-label="Label 2" flex="50">Brown</md-radio-button>
+        </div>
+        <div layout="horizontal">
+          <md-radio-button value="blond" aria-label="Label 2" flex="50">Blond</md-radio-button>
+          <md-radio-button value="black" aria-label="Label 2" flex="50">Black</md-radio-button>
+        </div>
+    </md-radio-group>
+
+    <md-divider></md-divider>
+
+    <md-radio-group ng-model="data.length" layout="vertical">
+      <div layout="horizontal">
+        <md-radio-button value="short" aria-label="Label 1" flex="50">Short</md-radio-button>
+        <md-radio-button value="medium" aria-label="Label 2" flex="50">Medium</md-radio-button>
+      </div>
+      <div layout="horizontal">
+        <md-radio-button value="long" aria-label="Label 2" flex="50">Long</md-radio-button>     
+      </div>
+    </md-radio-group>
+
+    <md-divider></md-divider>
+
+    
+    <div layout="vertical">
+      <div layout="horizontal">
+        <md-checkbox   ng-model="styles['classic']" aria-label="classic" flex="50">
+          Classic
+        </md-checkbox>
+        <md-checkbox   ng-model="styles['trendy']" aria-label="trendy" flex="50">
+          Trendy
+        </md-checkbox>
+      </div>
+      <div layout="horizontal">
+        <md-checkbox   ng-model="styles['vintage']" aria-label="vintage" flex="50">
+          Vintage
+        </md-checkbox>
+        <md-checkbox   ng-model="styles['prestige']" aria-label="prestige" flex="50">
+          Prestige
+        </md-checkbox>
+      </div>
+      <div layout="horizontal">
+        <md-checkbox   ng-model="styles['creative']" aria-label="creative" flex="50">
+          Creative
+        </md-checkbox>
+        <md-checkbox   ng-model="styles['curly']" aria-label="curly" flex="50">
+          Curly
+        </md-checkbox>
+      </div>
+       <div layout="horizontal">
+        <md-checkbox   ng-model="styles['bob']" aria-label="bob" flex="50">
+          Bob
+        </md-checkbox>  
+      </div>
+
+    </div>
+  </div>
+
+</div>
