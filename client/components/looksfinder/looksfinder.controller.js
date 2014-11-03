@@ -18,6 +18,6 @@ angular.module('thelooksappApp')
 
 	$scope.toggleShowFinder = function toggleShowFinder () {
 		$scope.showFinder =  ! $scope.showFinder;
-	}
+	};
 
 });
