@@ -56,15 +56,15 @@ angular.module('thelooksappApp', [
   .factory('menu', function($location, $rootScope) {
 
   var sections = [{
-    name: 'Layout',
+    name: 'Site administration',
     pages: [{
-      name: 'Container Elements',
+      name: 'Pro Users',
       id: 'layoutContainers',
-      url: '/layout/container'
+      url: '/admin/prouser'
     },{
-      name: 'Grid System',
+      name: 'Users',
       id: 'layoutGrid',
-      url: '/layout/grid'
+      url: '/admin/user'
     },{
       name: 'Child Alignment',
       id: 'layoutAlign',
@@ -100,7 +100,7 @@ angular.module('thelooksappApp', [
 
   $rootScope.$on('$locationChangeSuccess', onLocationChange);
 
-  return self = {
+  self = {
     sections: sections,
 
     selectSection: function(section) {
@@ -114,7 +114,7 @@ angular.module('thelooksappApp', [
     },
 
     selectPage: function(section, page) {
-      page && page.url && $location.path(page.url);
+      //page && page.url && $location.path(page.url);
       self.currentSection = section;
       self.currentPage = page;
     },
@@ -123,6 +123,7 @@ angular.module('thelooksappApp', [
     }
   };
 
+  return self;
 
 
   

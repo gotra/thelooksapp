@@ -1,0 +1,28 @@
+<div layout="vertical">
+  <md-content md-theme="light-blue-dark">
+    <form style="padding: 20px;">
+      <div class="row">
+        <md-text-float label="Website" ng-model="user.website"></md-text-float>
+        <md-text-float label="eMail" ng-model="user.email" type="email"></md-text-float>
+      </div>
+    
+  </md-content>
+
+  <md-content>
+    
+      <md-text-float label="Company" ng-model="user.company"></md-text-float>
+      <div class="row">
+          <md-text-float label="FirstName" ng-model="user.firstName"> </md-text-float>
+          <md-text-float label="LastName" ng-model="user.lastName" class="long"> </md-text-float>
+      </div>
+      <md-text-float label="Address" ng-model="user.address.line"> </md-text-float>
+      <div class="row">
+        <md-text-float label="City" ng-model="user.address.city"> </md-text-float>
+        <md-text-float label="State" ng-model="user.address.state"> </md-text-float>
+        <md-text-float label="Postal Code" ng-model="user.address.postalCode"> </md-text-float>
+      </div>
+      <md-text-float label="Country" ng-model="user.address.country" disabled> </md-text-float>
+    
+  </md-content>
+</form>
+</div>
