@@ -1,14 +1,15 @@
-<div layout="vertical">
-  <md-content md-theme="light-blue-dark">
-    <form style="padding: 20px;">
-      <div class="row">
+<div layout="vertical"  layout-align="start">
+
+
+  <div >
+             <img ng-src="{{user.imageId}}"alt="GR" class="face-square"/>
+  </div>
+  <div>
+
+   <div class="row">
         <md-text-float label="Website" ng-model="user.website"></md-text-float>
         <md-text-float label="eMail" ng-model="user.email" type="email"></md-text-float>
       </div>
-    
-  </md-content>
-
-  <md-content>
     
       <md-text-float label="Company" ng-model="user.company"></md-text-float>
       <div class="row">
@@ -21,8 +22,15 @@
         <md-text-float label="State" ng-model="user.address.state"> </md-text-float>
         <md-text-float label="Postal Code" ng-model="user.address.postalCode"> </md-text-float>
       </div>
-      <md-text-float label="Country" ng-model="user.address.country" disabled> </md-text-float>
+      <md-text-float label="Country" ng-model="user.address.country"> </md-text-float>
     
+  </div>
+  <div class="buttondemoBasicUsage">
+    <md-content>
+   <section layout="vertical" layout-sm="horizontal" layout-align="start">
+      <md-button class="md-raised md-primary">Save</md-button>
+      <md-button class="md-raised md-warn">Cancel</md-button>
+    </section>
   </md-content>
-</form>
+</div>
 </div>

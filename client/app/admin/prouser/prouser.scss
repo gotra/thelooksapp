@@ -1,29 +1,4 @@
-.textFielddemoBasicUsage {
-  /**
- *  SaSS version
- *
- * form > .row {
- *   @include flex-display();
- *   @include flex-align-items(center);
- *   @include flex-direction(row);
- *
- *   > * {
- *     font-size: inherit;
- *     margin: 0 8px;
- *   }
- *
- *   margin-left: -8px;
- * }
- *
- *
- * md-input-group.long {
- *   input {
- *      width : 262px;
- *   }
- * }
- *
-*/ }
-  .textFielddemoBasicUsage form > .row {
+ .row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -42,9 +17,50 @@
     -ms-flex-direction: row;
     flex-direction: row;
     margin-left: -8px; }
-  .textFielddemoBasicUsage .row > * {
+.row > * {
     font-size: inherit;
     margin-left: 8px;
     margin-right: 8px; }
-  .textFielddemoBasicUsage md-input-group.long > input {
+md-input-group.long > input {
     width: 264px; }
+ 
+
+
+
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 48px;
+  margin: 16px; 
+  }
+
+  .face-square {
+    border: 1px solid #ddd;
+    width: 128px;
+    height: 128px;
+    margin: 5px; 
+  }
+
+
+
+ .buttondemoBasicUsage section {
+    /*background: #f7f7f7;*/
+    border-radius: 3px;
+    text-align: center;
+    margin: 1em;
+    position: relative !important;
+    padding-bottom: 10px; }
+  .buttondemoBasicUsage md-content {
+    margin-right: 7px; }
+  .buttondemoBasicUsage section md-button:not(.md-fab) {
+    width: 10em; }
+  .buttondemoBasicUsage section md-button {
+    display: block;
+    margin: 1em;
+    line-height: 25px; }
+  .buttondemoBasicUsage .label {
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    color: #ccc;
+    font-size: 14px; }

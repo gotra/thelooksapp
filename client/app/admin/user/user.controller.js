@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('thelooksappApp')
-  .controller('UserCtrl', function ($scope, $http, Auth, User) {
+  .controller('AdminUserCtrl', function ($scope, $http, Auth, User) {
 
     // Use the User $resource to fetch all users
     $scope.users = User.query();
