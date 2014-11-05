@@ -11,8 +11,13 @@ angular.module('thelooksappApp')
         templateUrl: 'app/admin/prouser/prouserlist.html',
         controller: 'ProUserListCtrl'
       })
+      .when('/admin/prouser/new', {
+        templateUrl: 'app/admin/prouser/prouserdetail.html',
+        controller: 'ProUserNewCtrl'
+      })
       .when('/admin/prouser/:prouserid', {
         templateUrl: 'app/admin/prouser/prouserdetail.html',
-        controller: 'ProUserDetailCtrl'
-      });
+        controller: 'ProUserEditCtrl'
+      })
+      ;
   });
