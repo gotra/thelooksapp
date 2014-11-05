@@ -25,6 +25,15 @@ angular.module('thelooksappApp')
 			});
 		};
 
+		$scope.remove = function remove () {
+			$scope.user.$remove(function () {
+				$location.path( '/admin/prouser' );
+			},
+			function(){
+				//todo handle failure
+			});
+		};
+
 		$scope.goToList = function () {
 			$location.path( '/admin/prouser' );
 		};
