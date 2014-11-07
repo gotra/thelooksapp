@@ -8,6 +8,7 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var ProUser = require('../api/prouser/prouser.model');
+var Images = require ('../api/image/image.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -80,6 +81,27 @@ ProUser.find({}).remove(function() {
 
   }, function() {
       console.log('finished populating pro users');
+    }
+  );
+});
+
+
+Images.find({}).remove(function() {
+  Images.create({
+    imageId: 'http://28.media.tumblr.com/tumblr_ltueurkwOW1qft5t6o1_500.jpg',
+    imageWidth: '280',
+    imageHeight: '389',
+    tags: ['blond', 'short', 'male', 'classic']
+    
+
+  }, {
+    imageId: 'http://26.media.tumblr.com/tumblr_lk0hdcDvTa1qjoblyo1_500.jpg',
+    imageWidth: '280',
+    imageHeight: '389',
+    tags: ['blond', 'short', 'female', 'classic']
+
+  }, function() {
+      console.log('finished populating images');
     }
   );
 });
