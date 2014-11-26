@@ -18,9 +18,9 @@ angular.module('thelooksappApp')
       id: 'layoutGrid',
       url: '/admin/user'
     },{
-      name: 'Child Alignment',
+      name: 'Upload pictures',
       id: 'layoutAlign',
-      url: '/layout/alignment'
+      url: '/admin/upload'
     },{
       name: 'Options',
       id: 'layoutOptions',
@@ -65,9 +65,9 @@ angular.module('thelooksappApp')
       self.selectSection(sections[3]);
     }
   }
-  
 
-  
+
+
 
   $rootScope.$on('$locationChangeSuccess', onLocationChange);
 
@@ -108,5 +108,5 @@ angular.module('thelooksappApp')
   return self;
 
 
-  
+
 });

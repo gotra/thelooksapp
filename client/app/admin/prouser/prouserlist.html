@@ -9,9 +9,11 @@
     
 <md-content>
 
-    <md-list>
-
-      <md-item ng-repeat="user in proUsers">
+    <md-list  layout-align="end">
+       <md-whiteframe class="md-whiteframe-z2" layout layout-align="start" ng-repeat="user in proUsers" flex-sm="50">
+    
+  
+      <md-item >
         <md-item-content>
           <div class="md-tile-left">
               <a ng-href="/admin/prouser/{{user._id}}"><img ng-src="{{user.imageId}}" class="face" alt="GR"/></a>
@@ -28,6 +30,7 @@
           </div>
         </md-item-content>
       </md-item>
+      </md-whiteframe>
 
     </md-list>
 

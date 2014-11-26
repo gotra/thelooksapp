@@ -19,5 +19,9 @@ angular.module('thelooksappApp')
         templateUrl: 'app/admin/prouser/prouserdetail.html',
         controller: 'ProUserEditCtrl'
       })
+      .when('/admin/upload', {
+        templateUrl: 'app/admin/upload/upload.html',
+        controller: 'UploadCtrl'
+      });
       ;
   });
