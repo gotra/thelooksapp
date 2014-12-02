@@ -1,41 +1,40 @@
 'use strict';
 
 angular.module('thelooksappApp')
-  .controller('UploadCtrl', function ($scope, $rootScope, $routeParams, $location, $upload) {
-    /* Uploading with Angular File Upload */
-      $scope.onFileSelect = function($files) {
-        var file = $files[0]; // we're not interested in multiple file uploads here
-        $scope.upload = $upload.upload({
-          url: "https://api.cloudinary.com/v1_1/" + $.cloudinary.config().cloud_name + "/upload",
-          data: {upload_preset: $.cloudinary.config().upload_preset, tags: 'myphotoalbum', context:'photo=' + $scope.title},
-          file: file
-        }).progress(function (e) {
-          $scope.progress = Math.round((e.loaded * 100.0) / e.total);
-          $scope.status = "Uploading... " + $scope.progress + "%";
-          $scope.$apply();
-        }).success(function (data, status, headers, config) {
-          $rootScope.photos = $rootScope.photos || [];
-          data.context = {custom: {photo: $scope.title}};
-          $scope.result = data;
-          $rootScope.photos.push(data);
-          $scope.$apply();
-        });
-      };
+  .controller('UploadCtrl', function ($scope) {
 
-      /* Modify the look and fill of the dropzone when files are being dragged over it */
-      $scope.dragOverClass = function($event) {
-        var items = $event.dataTransfer.items;
-        var hasFile = false;
-        if (items != null) {
-          for (var i = 0 ; i < items.length; i++) {
-            if (items[i].kind == 'file') {
-              hasFile = true;
-              break;
-            }
-          }
-        } else {
-          hasFile = true;
+    $scope.dropzoneConfig = {
+      'options': { // passed into the Dropzone constructor
+        'url': 'https://api.cloudinary.com/v1_1/www-thelooks-net/image/upload'
+
+
+      },
+      'eventHandlers': {
+        'sending': function (file, xhr, formData) {
+          formData.append("upload_preset","wefi1sgv");
+        },
+        'success': function (file, response) {
+
+          console.log("response recieved from the server");
+          console.log(response);
+
+        },
+        'dragenter': function(event,e) {
+          Document.getElementbyId
+        },
+
+        'drop' : function(event) {
+          console.log("dragend event" +  event);
+        },
+
+
+        'dragleave' : function(event) {
+          console.log("dragleave event" +  event);
         }
-        return hasFile ? "dragover" : "dragover-err";
-      };
+
+
+
+      }
+    };
+
   });

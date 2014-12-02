@@ -5,8 +5,7 @@ angular.module('thelooksappApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngMaterial',
-  'angularFileUpload'
+  'ngMaterial'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
