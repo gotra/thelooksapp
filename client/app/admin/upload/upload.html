@@ -55,33 +55,28 @@
         <md-checkbox   ng-model="tags['trendy']" aria-label="trendy">
           Trendy
         </md-checkbox>
-
         <md-checkbox   ng-model="tags['vintage']" aria-label="vintage">
           Vintage
         </md-checkbox>
-
         <md-checkbox   ng-model="tags['prestige']" aria-label="prestige">
           Prestige
         </md-checkbox>
-
         <md-checkbox   ng-model="tags['creative']" aria-label="creative">
           Creative
         </md-checkbox>
         <md-checkbox   ng-model="tags['curly']" aria-label="curly">
           Curly
         </md-checkbox>
-
         <md-checkbox   ng-model="tags['bob']" aria-label="bob">
           Bob
         </md-checkbox>
-
   </div>
   </div>
 
   <div>
-    <md-button ng-disabled="isUploading" class="md-raised md-primary" aria-label="save">Save</md-button>
+    <md-button ng-disabled="isUploading" class="md-raised md-primary" aria-label="save" ng-click="bulkUpload()">Save</md-button>
     <md-button ng-disabled="isUploading" class="md-raised md-warn" aria-label="cancel">Cancel</md-button>
   </div>
-
+ 
 </section>
 

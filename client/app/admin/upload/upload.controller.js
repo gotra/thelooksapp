@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('thelooksappApp')
-  .controller('UploadCtrl', function ($scope) {
+  .controller('UploadCtrl', function ($scope, Images) {
 
-    $scope.tags=[];
+    $scope.tags={};
 
     $scope.uploadedfiles=[];
 
@@ -24,7 +24,6 @@ angular.module('thelooksappApp')
             $scope.$apply();
           }
 
-
         },
         'success': function (file, response) {
 
@@ -32,19 +31,6 @@ angular.module('thelooksappApp')
           console.log(response);
 
         },
-        'dragenter': function(event,e) {
-          Document.getElementbyId
-        },
-
-        'drop' : function(event) {
-          console.log("dragend event" +  event);
-        },
-
-
-        'dragleave' : function(event) {
-          console.log("dragleave event" +  event);
-        },
-
         'queuecomplete' : function(e) {
           console.log('completed!');
 
@@ -52,13 +38,15 @@ angular.module('thelooksappApp')
           $scope.$apply()
         }
 
-
-
-
-
       }
     };
 
+    // end of dropzone config
 
+    $scope.bulkUpload = function() {
 
-  });
+        Images.bulkupload({tags: $scope.tags},function(){});
+
+    };
+
+});

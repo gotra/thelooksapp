@@ -36,6 +36,17 @@ exports.create = function(req, res) {
 
 //create a set of new images in thDB
 exports.bulk = function(req,res) {
+
+  var tags = req.body.tags, tagsToSave=[] ;
+
+  for (var key in tags ) {
+    if (tags[key] === true ) {
+      tagsToSave.push(key);
+    }
+  }
+
+ 
+  res.send(200);
  
 };
 

@@ -7,7 +7,8 @@ angular.module('thelooksappApp')
     return $resource('/api/images/:id',
       {id: '@_id'},
       {'update': { method : 'PUT'},
-      'filter': {method:'GET',isArray:true}}
+      'filter': {method:'GET',isArray:true},
+  		'bulkupload':{ method: 'POST', url: '/api/images/bulk'}}
     );
 
   });
