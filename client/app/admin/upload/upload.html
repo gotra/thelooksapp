@@ -1,13 +1,13 @@
 
-<section id="dropContainer" layout="vertical"  layout-fill  layout-align="center start">
+<section id="dropContainer" layout="column"  layout-align="center center">
 
 
-<div layout-fill class="dropzone" dropzone="dropzoneConfig"  id="dropPreviewContainer">
+<div  layout="row" layout-fill class="dropzone" dropzone="dropzoneConfig" id="dropPreviewContainer">
 
 </div>
-  <div layout="horizontal" layout-margin layout-fill>
+  <div layout="row" layout-margin >
 
-    <div layout="vertical" flex="25">
+    <div layout="column" flex="25">
 
       <md-checkbox   ng-model="tags['male']" aria-label="Male">
         Male
@@ -18,7 +18,7 @@
       </md-checkbox>
       </div>
 
-    <div layout="vertical" flex="25">
+    <div layout="column" flex="25">
 
       <md-checkbox   ng-model="tags['platine']" aria-label="platine">
         Platine
@@ -35,7 +35,7 @@
       </md-checkbox>
 
       </div>
-    <div layout="vertical" flex="25" >
+    <div layout="column" flex="25" >
       <md-checkbox   ng-model="tags['short']" aria-label="short">
         Short
       </md-checkbox>
@@ -47,7 +47,7 @@
       </md-checkbox>
       </div>
 
-      <div layout="vertical" flex="25">
+      <div layout="column" flex="25">
 
         <md-checkbox   ng-model="tags['classic']" aria-label="classic">
           Classic
@@ -79,13 +79,9 @@
   </div>
 
   <div>
-
     <md-button ng-disabled="isUploading" class="md-raised md-primary" aria-label="save">Save</md-button>
     <md-button ng-disabled="isUploading" class="md-raised md-warn" aria-label="cancel">Cancel</md-button>
-
   </div>
-
-
 
 </section>
 

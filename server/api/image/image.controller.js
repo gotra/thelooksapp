@@ -34,6 +34,11 @@ exports.create = function(req, res) {
   });
 };
 
+//create a set of new images in thDB
+exports.bulk = function(req,res) {
+ 
+};
+
 // Updates an existing image in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }

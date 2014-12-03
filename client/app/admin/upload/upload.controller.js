@@ -11,7 +11,8 @@ angular.module('thelooksappApp')
 
     $scope.dropzoneConfig = {
       'options': { // passed into the Dropzone constructor
-        'url': 'https://api.cloudinary.com/v1_1/www-thelooks-net/image/upload'
+        'url': 'https://api.cloudinary.com/v1_1/www-thelooks-net/image/upload',
+        'addRemoveLinks' : 'true'
 
 
       },

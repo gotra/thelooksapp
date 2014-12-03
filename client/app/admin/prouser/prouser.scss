@@ -47,9 +47,10 @@ md-input-group.long > input {
   }
 
 
-
- .buttondemoBasicUsage section {
-    /*background: #f7f7f7;*/
+.buttondemoBasicUsage {
+  /** From vulcanized demo **/ }
+  .buttondemoBasicUsage section {
+    background: #f7f7f7;
     border-radius: 3px;
     text-align: center;
     margin: 1em;
@@ -57,9 +58,9 @@ md-input-group.long > input {
     padding-bottom: 10px; }
   .buttondemoBasicUsage md-content {
     margin-right: 7px; }
-  .buttondemoBasicUsage section md-button:not(.md-fab) {
-    width: 10em; }
-  .buttondemoBasicUsage section md-button {
+  .buttondemoBasicUsage section .md-button:not(.md-fab) {
+    min-width: 10em; }
+  .buttondemoBasicUsage section .md-button {
     display: block;
     margin: 1em;
     line-height: 25px; }
@@ -69,6 +70,7 @@ md-input-group.long > input {
     left: 7px;
     color: #ccc;
     font-size: 14px; }
+ 
 
 md-whiteframe {
   background: #fff;
